@@ -22,4 +22,15 @@ public class AddressController {
         return new Address(counter.incrementAndGet(), key, street, place, plz);
     }
 
+    @RequestMapping(value="/ready", method = RequestMethod.GET)
+    public Address readyCustomer() {
+
+        final String key = "RDY";
+        final String street = "Ready 5";
+        final String place = "Ready";
+        final String plz = "2000";
+
+        return new Address(counter.incrementAndGet(), key, street, place, plz);
+    }
+
 }
