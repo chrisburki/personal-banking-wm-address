@@ -1,0 +1,11 @@
+apiVersion: skaffold/v1beta7
+kind: Config
+build:
+  artifacts:
+    - image: eu.gcr.io/buc-personal-banking/wm-address
+  googleCloudBuild:
+    projectId: buc-personal-banking
+deploy:
+  kubectl:
+    manifests:
+    - k8s/wm-address.yaml
